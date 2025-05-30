@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E0E5EC"
+    android:padding="16dp">
+
+    <!-- Поле для відображення введення та результату -->
+    <TextView
+        android:id="@+id/textViewDisplay"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/neumorphic_background"
+        android:padding="20dp"
+        android:text="0"
+        android:textColor="#2A2A2A"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Сітка кнопок -->
+    <GridLayout
+        android:id="@+id/gridLayoutButtons"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:columnCount="5"
+        android:rowCount="5"
+        app:layout_constraintTop_toBottomOf="@id/textViewDisplay"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <!-- Ряд 1: Пам’ять та очищення -->
+        <Button
+            android:id="@+id/buttonMemoryClear"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_margin="6dp"
+            android:background="@drawable/neumorphic_button"
+            android:text="MC"
+            android:textColor="#FF6F61"
+            android:textSize="18sp"
+            android:stateListAnimator="@null" />
+
+        <Button
+            android:id="@+id/buttonMemoryRecall"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_margin="6dp"
+            android:background="@drawable/neumorphic_button"
+            android:text="MR"
+            android:textColor="#FF6F61"
+            android:textSize="18sp"
+            android:stateListAnimator="@null" />
+
+        <Button
+            android:id="@+id/buttonMemoryStore"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_margin="6dp"
+            android:background="@drawable/neumorphic_button"
+            android:text="MS"
+            android:textColor="#FF6F61"
+            android:textSize="18sp"
+            android:stateListAnimator="@null" />
+
+        <Button
+            android:id="@+id/buttonClear"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_margin="6dp"
+            android:background="@drawable/neumorphic_button"
+            android:text="C"
+            android:textColor="#FF6F61"
+            android:textSize="18sp"
+            android:stateListAnimator="@null" />
+
+        <Button
+            android:id="@+id/buttonPower"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_margin="6dp"
+            android:background="@drawable/neumorphic_button"
+            android:text="^"
+            android:textColor="#FF6F61"
+            android:textSize="18sp"
+            android:stateListAnimator="@null" />
+
+        <!-- Ряд 2: Цифри 7-9 та операції -->
+        <Button
+            android:id="@+id/button7"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_margin="6dp"
+            android:background="@drawable/neumorphic_button"
+            android:text="7"
+            android:textColor="#2A2A2A"
+            android:textSize="18sp"
+            android:stateListAnimator="@null" />
+
+        <Button
+            android:id="@+id/button8"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_margin="6dp"
+            android:background="@drawable/neumorphic_button"
+            android:text="8"
+            android:textColor="#2A2A2A"
+            android:textSize="18sp"
+            android:stateListAnimator="@null" />
+
+        <Button
+            android:id="@+id/button9"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_margin="6dp"
+            android:background="@drawable/neumorphic_button"
+            android:text="9"
+            android:textColor="#2A2A2A"
+            android:textSize="18sp"
+            android:stateListAnimator="@null" />
+
+        <Button
+            android:id="@+id/buttonDivide"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_margin="6dp"
+            android:background="@drawable/neumorphic_button"
+            android:text="/"
+            android:textColor="#4A90E2"
+            android:textSize="18sp"
+            android:stateListAnimator="@null" />
+
+        <Button
+            android:id="@+id/buttonMultiply"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_margin="6dp"
+            android:background="@drawable/neumorphic_button"
+            android:text="*"
+            android:textColor="#4A90E2"
+            android:textSize="18sp"
+            android:stateListAnimator="@null" />
+
+        <!-- Ряд 3: Цифри 4-6 та операція -->
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_margin="6dp"
+            android:background="@drawable/neumorphic_button"
+            android:text="4"
+            android:textColor="#2A2A2A"
+            android:textSize="18sp"
+            android:stateListAnimator="@null" />
+
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_margin="6dp"
+            android:background="@drawable/neumorphic_button"
+            android:text="5"
+            android:textColor="#2A2A2A"
+            android:textSize="18sp"
+            android:stateListAnimator="@null" />
+
+        <Button
+            android:id="@+id/button6"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_margin="6dp"
+            android:background="@drawable/neumorphic_button"
+            android:text="6"
+            android:textColor="#2A2A2A"
+            android:textSize="18sp"
+            android:stateListAnimator="@null" />
+
+        <Button
+            android:id="@+id/buttonSubtract"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_margin="6dp"
+            android:background="@drawable/neumorphic_button"
+            android:text="-"
+            android:textColor="#4A90E2"
+            android:textSize="18sp"
+            android:stateListAnimator="@null" />
+
+        <Button
+            android:id="@+id/buttonAdd"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_margin="6dp"
+            android:background="@drawable/neumorphic_button"
+            android:text="+"
+            android:textColor="#4A90E2"
+            android:textSize="18sp"
+            android:stateListAnimator="@null" />
+
+        <!-- Ряд 4: Цифри 1-3 -->
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_margin="6dp"
+            android:background="@drawable/neumorphic_button"
+            android:text="1"
+            android:textColor="#2A2A2A"
+            android:textSize="18sp"
+            android:stateListAnimator="@null" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_margin="6dp"
+            android:background="@drawable/neumorphic_button"
+            android:text="2"
+            android:textColor="#2A2A2A"
+            android:textSize="18sp"
+            android:stateListAnimator="@null" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_margin="6dp"
+            android:background="@drawable/neumorphic_button"
+            android:text="3"
+            android:textColor="#2A2A2A"
+            android:textSize="18sp"
+            android:stateListAnimator="@null" />
+
+        <Button
+            android:id="@+id/buttonDot"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_margin="6dp"
+            android:background="@drawable/neumorphic_button"
+            android:text="."
+            android:textColor="#2A2A2A"
+            android:textSize="18sp"
+            android:stateListAnimator="@null" />
+
+        <Button
+            android:id="@+id/buttonEquals"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_margin="6dp"
+            android:background="@drawable/neumorphic_button_equals"
+            android:text="="
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:stateListAnimator="@null" />
+
+        <!-- Ряд 5: 0 та інші -->
+        <Button
+            android:id="@+id/button0"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_columnSpan="3"
+            android:layout_margin="6dp"
+            android:background="@drawable/neumorphic_button"
+            android:text="0"
+            android:textColor="#2A2A2A"
+            android:textSize="18sp"
+            android:stateListAnimator="@null" />
+
+        <Button
+            android:id="@+id/buttonBackspace"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_columnSpan="2"
+            android:layout_margin="6dp"
+            android:background="@drawable/neumorphic_button"
+            android:text="⌫"
+            android:textColor="#FF6F61"
+            android:textSize="18sp"
+            android:stateListAnimator="@null" />
+    </GridLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

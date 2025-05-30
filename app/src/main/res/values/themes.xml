@@ -1,0 +1,13 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Базова тема додатка, похідна від Theme.AppCompat -->
+    <style name="Theme.Calculator_Lab2_S" parent="Theme.AppCompat.NoActionBar">
+        <!-- Первинний колір -->
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryDark">@color/purple_700</item>
+        <item name="colorAccent">@color/teal_200</item>
+        <!-- Колір фону -->
+        <item name="android:windowBackground">@color/black</item>
+        <!-- Статус-бар -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryDark</item>
+    </style>
+</resources>
